@@ -21,12 +21,12 @@ document.querySelector("#pause").addEventListener("click", function() {
 });
 
 document.querySelector("#slower").addEventListener("click", function() {
-	video.playbackRate = video.playbackRate - 0.1;
+	video.playbackRate = video.playbackRate / 0.9;
 	console.log(video.playbackRate);
 });
 
 document.querySelector("#faster").addEventListener("click", function() {
-	video.playbackRate = video.playbackRate + 0.1;
+	video.playbackRate = video.playbackRate * 0.9;
 	console.log(video.playbackRate);
 });
 
