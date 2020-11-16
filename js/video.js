@@ -21,12 +21,12 @@ document.querySelector("#pause").addEventListener("click", function() {
 });
 
 document.querySelector("#slower").addEventListener("click", function() {
-	video.playbackRate = video.playbackRate / 0.9;
+	video.playbackRate = video.playbackRate - 0.1;
 	console.log(video.playbackRate);
 });
 
 document.querySelector("#faster").addEventListener("click", function() {
-	video.playbackRate = video.playbackRate * 0.9;
+	video.playbackRate = video.playbackRate + 0.1;
 	console.log(video.playbackRate);
 });
 
@@ -57,9 +57,9 @@ document.querySelector("#volumeSlider").addEventListener("input", function() {
 });
 
 document.querySelector("#old").addEventListener("click", function() {
-	video.style.filter = "grayscale(100%)";
+	video.classList.add("oldTime");
 });
 
 document.querySelector("#original").addEventListener("click", function() {
-	video.style.filter = "grayscale(0%)";
+	video.classList.remove("oldTime");
 });
